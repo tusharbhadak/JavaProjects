@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://kamlendu-Vostro-1550:8080/SecureBookBeanService/SecureBookBean?wsdl" uri="src/conf/xml-resources/web-service-references/SecureBookBean/wsdl/kamlendu-Vostro-1550_8080/SecureBookBeanService/SecureBookBean.wsdl"/>
+    <system systemId="http://kamlendu-Vostro-1550:8080/SecureBookBeanService/SecureBookBean?xsd=1" uri="src/conf/xml-resources/web-service-references/SecureBookBean/wsdl/kamlendu-Vostro-1550_8080/SecureBookBeanService/SecureBookBean.xsd_1.xsd"/>
+</catalog>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="addEmployee" type="tns:addEmployee"/>
+
+<xs:element name="employee" type="tns:employee"/>
+
+<xs:element name="getAllEmployees" type="tns:getAllEmployees"/>
+
+<xs:element name="getAllEmployeesResponse" type="tns:getAllEmployeesResponse"/>
+
+<xs:element name="getEmployeesOnSal" type="tns:getEmployeesOnSal"/>
+
+<xs:element name="getEmployeesOnSalResponse" type="tns:getEmployeesOnSalResponse"/>
+
+<xs:element name="removeEmployee" type="tns:removeEmployee"/>
+
+<xs:element name="updateEmployee" type="tns:updateEmployee"/>
+
+<xs:complexType name="updateEmployee">
+<xs:sequence>
+<xs:element name="empno" type="xs:int"/>
+<xs:element name="ename" type="xs:string" minOccurs="0"/>
+<xs:element name="sal" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeesOnSal">
+<xs:sequence>
+<xs:element name="sal" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEmployeesOnSalResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:employee" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="employee">
+<xs:sequence>
+<xs:element name="empno" type="xs:int" minOccurs="0"/>
+<xs:element name="ename" type="xs:string" minOccurs="0"/>
+<xs:element name="salary" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllEmployees">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllEmployeesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:employee" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEmployee">
+<xs:sequence>
+<xs:element name="empno" type="xs:int"/>
+<xs:element name="ename" type="xs:string" minOccurs="0"/>
+<xs:element name="sal" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeEmployee">
+<xs:sequence>
+<xs:element name="empno" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

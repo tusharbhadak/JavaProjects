@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glassfish-ejb-jar PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 EJB 3.1//EN" "http://glassfish.org/dtds/glassfish-ejb-jar_3_1-1.dtd">
+<glassfish-ejb-jar>
+  <security-role-mapping>
+    <role-name>admin</role-name>
+     <group-name>Admin</group-name>
+  </security-role-mapping>
+   <security-role-mapping>
+    <role-name>supervisor</role-name>
+    <group-name>Supervisor</group-name>
+  </security-role-mapping>
+<enterprise-beans>
+<ejb>
+<ejb-name>SecureBookBean</ejb-name>
+<webservice-endpoint>
+<port-component-name>SecureBookBeanPort</port-component-name>
+<login-config>
+<auth-method>FORM</auth-method>
+<realm>securejdbc</realm>
+</login-config>
+</webservice-endpoint>
+</ejb>
+</enterprise-beans>
+</glassfish-ejb-jar>

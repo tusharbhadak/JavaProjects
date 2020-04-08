@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>ittag</short-name>
+  <uri>/WEB-INF/tlds/ittag</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+          translation time. Validator entries look like this: 
+       <validator>
+           <validator-class>com.mycompany.TagLibValidator</validator-class>
+           <init-param>
+              <param-name>parameter</param-name>
+              <param-value>value</param-value>
+           </init-param>
+       </validator>
+    -->
+  <!-- A tag library can register Servlet Context event listeners in
+         case it needs to react to such events. Listener entries look
+         like this: 
+      <listener>
+          <listener-class>com.mycompany.TagLibListener</listener-class> 
+      </listener>
+    -->
+  <tag-file>
+    <name>cur_date</name>
+    <path>/WEB-INF/tags/cur_date.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>upper</name>
+    <path>/WEB-INF/tags/upper.tag</path>
+  </tag-file>
+  <tag-file>
+    <name>changeCase</name>
+    <path>/WEB-INF/tags/changeCase.tag</path>
+  </tag-file>
+  
+  <function>
+      <display-name>reverseString</display-name>
+      <name>reverseString</name>
+      <function-class>customfunctions.StringOperations</function-class>
+      <function-signature>String reverseString(java.lang.String)</function-signature>
+  </function>
+  
+</taglib>

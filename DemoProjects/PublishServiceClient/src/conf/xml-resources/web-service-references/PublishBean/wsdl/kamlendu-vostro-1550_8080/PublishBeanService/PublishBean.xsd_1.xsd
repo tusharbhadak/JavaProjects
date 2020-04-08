@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ejb/">
+
+<xs:element name="addAddressToCustomer" type="tns:addAddressToCustomer"/>
+
+<xs:element name="addAddressToCustomerResponse" type="tns:addAddressToCustomerResponse"/>
+
+<xs:element name="addCustomer" type="tns:addCustomer"/>
+
+<xs:element name="addCustomerResponse" type="tns:addCustomerResponse"/>
+
+<xs:element name="addSubscriptionsToCustomer" type="tns:addSubscriptionsToCustomer"/>
+
+<xs:element name="addSubscriptionsToCustomerResponse" type="tns:addSubscriptionsToCustomerResponse"/>
+
+<xs:element name="address" type="tns:address"/>
+
+<xs:element name="createSubscription" type="tns:createSubscription"/>
+
+<xs:element name="createSubscriptionResponse" type="tns:createSubscriptionResponse"/>
+
+<xs:element name="customer" type="tns:customer"/>
+
+<xs:element name="getAddressesByCity" type="tns:getAddressesByCity"/>
+
+<xs:element name="getAddressesByCityResponse" type="tns:getAddressesByCityResponse"/>
+
+<xs:element name="getAllAddressesOfCustomer" type="tns:getAllAddressesOfCustomer"/>
+
+<xs:element name="getAllAddressesOfCustomerResponse" type="tns:getAllAddressesOfCustomerResponse"/>
+
+<xs:element name="getAllCustomers" type="tns:getAllCustomers"/>
+
+<xs:element name="getAllCustomersByFirstName" type="tns:getAllCustomersByFirstName"/>
+
+<xs:element name="getAllCustomersByFirstNameResponse" type="tns:getAllCustomersByFirstNameResponse"/>
+
+<xs:element name="getAllCustomersByLastName" type="tns:getAllCustomersByLastName"/>
+
+<xs:element name="getAllCustomersByLastNameResponse" type="tns:getAllCustomersByLastNameResponse"/>
+
+<xs:element name="getAllCustomersOfSubscription" type="tns:getAllCustomersOfSubscription"/>
+
+<xs:element name="getAllCustomersOfSubscriptionResponse" type="tns:getAllCustomersOfSubscriptionResponse"/>
+
+<xs:element name="getAllCustomersResponse" type="tns:getAllCustomersResponse"/>
+
+<xs:element name="getAllSubscriptionsOfCustomer" type="tns:getAllSubscriptionsOfCustomer"/>
+
+<xs:element name="getAllSubscriptionsOfCustomerResponse" type="tns:getAllSubscriptionsOfCustomerResponse"/>
+
+<xs:element name="getCustomer" type="tns:getCustomer"/>
+
+<xs:element name="getCustomerByAddress" type="tns:getCustomerByAddress"/>
+
+<xs:element name="getCustomerByAddressResponse" type="tns:getCustomerByAddressResponse"/>
+
+<xs:element name="getCustomerResponse" type="tns:getCustomerResponse"/>
+
+<xs:element name="getSubscriptionsByTitle" type="tns:getSubscriptionsByTitle"/>
+
+<xs:element name="getSubscriptionsByTitleResponse" type="tns:getSubscriptionsByTitleResponse"/>
+
+<xs:element name="getSubscriptionsByType" type="tns:getSubscriptionsByType"/>
+
+<xs:element name="getSubscriptionsByTypeResponse" type="tns:getSubscriptionsByTypeResponse"/>
+
+<xs:element name="removeAddressFromCustomer" type="tns:removeAddressFromCustomer"/>
+
+<xs:element name="removeAddressFromCustomerResponse" type="tns:removeAddressFromCustomerResponse"/>
+
+<xs:element name="removeCustomer" type="tns:removeCustomer"/>
+
+<xs:element name="removeCustomerResponse" type="tns:removeCustomerResponse"/>
+
+<xs:element name="removeSubscription" type="tns:removeSubscription"/>
+
+<xs:element name="removeSubscriptionResponse" type="tns:removeSubscriptionResponse"/>
+
+<xs:element name="removeSubscriptionsFromCustomer" type="tns:removeSubscriptionsFromCustomer"/>
+
+<xs:element name="removeSubscriptionsFromCustomerResponse" type="tns:removeSubscriptionsFromCustomerResponse"/>
+
+<xs:element name="subscription" type="tns:subscription"/>
+
+<xs:element name="updateCustomer" type="tns:updateCustomer"/>
+
+<xs:element name="updateCustomerResponse" type="tns:updateCustomerResponse"/>
+
+<xs:element name="updateSubscription" type="tns:updateSubscription"/>
+
+<xs:element name="updateSubscriptionResponse" type="tns:updateSubscriptionResponse"/>
+
+<xs:complexType name="getAllCustomersByLastName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersByLastNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="customerID" type="xs:int" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersOfSubscription">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersOfSubscriptionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSubscriptionsFromCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSubscriptionsFromCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAddressesByCity">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAddressesByCityResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:address" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="address">
+<xs:sequence>
+<xs:element name="addressId" type="xs:int" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="customer" type="tns:customer" minOccurs="0"/>
+<xs:element name="state" type="xs:string" minOccurs="0"/>
+<xs:element name="street" type="xs:string" minOccurs="0"/>
+<xs:element name="zip" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSubscriptionsByTitle">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubscriptionsByTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subscription" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subscription">
+<xs:sequence>
+<xs:element name="subscriptionId" type="xs:int" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSubscription">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeSubscriptionResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getSubscriptionsByType">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getSubscriptionsByTypeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subscription" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAddressToCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+<xs:element name="arg4" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAddressToCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersByFirstName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllCustomersByFirstNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAddressesOfCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllAddressesOfCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:address" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerByAddress">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerByAddressResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeAddressFromCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeAddressFromCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addSubscriptionsToCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSubscriptionsToCustomerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllSubscriptionsOfCustomer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllSubscriptionsOfCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:subscription" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createSubscription">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createSubscriptionResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateSubscription">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSubscriptionResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ejb/">
+
+<xs:element name="addBook" type="tns:addBook"/>
+
+<xs:element name="addBookResponse" type="tns:addBookResponse"/>
+
+<xs:element name="bookMaster" type="tns:bookMaster"/>
+
+<xs:element name="getAllBooks" type="tns:getAllBooks"/>
+
+<xs:element name="getAllBooksResponse" type="tns:getAllBooksResponse"/>
+
+<xs:element name="removeBook" type="tns:removeBook"/>
+
+<xs:element name="removeBookResponse" type="tns:removeBookResponse"/>
+
+<xs:element name="updateBook" type="tns:updateBook"/>
+
+<xs:element name="updateBookResponse" type="tns:updateBookResponse"/>
+
+<xs:complexType name="removeBook">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeBookResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addBook">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addBookResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateBook">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+<xs:element name="arg2" type="xs:string" minOccurs="0"/>
+<xs:element name="arg3" type="xs:string" minOccurs="0"/>
+<xs:element name="arg4" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateBookResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllBooks">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllBooksResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:bookMaster" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bookMaster">
+<xs:sequence>
+<xs:element name="authorName" type="xs:string" minOccurs="0"/>
+<xs:element name="bookID" type="xs:int" minOccurs="0"/>
+<xs:element name="bookName" type="xs:string" minOccurs="0"/>
+<xs:element name="publisherName" type="xs:string" minOccurs="0"/>
+<xs:element name="synopsis" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
